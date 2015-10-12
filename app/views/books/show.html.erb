@@ -1,58 +1,22 @@
-<h2>Add New Book</h2>
-
-<%= form_for @book do |f| %>
-
-    <div class="form-group">
-      <%= f.label :title %><br />
-      <%= f.text_field :title, class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :isbn %><br />
-      <%= f.text_field :isbn ,class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :category %><br />
-      <%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %><br /><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :author %><br />
-      <%= f.select :author_id, Author.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %><br /><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :publisher %><br />
-      <%= f.select :publisher_id, Publisher.all.collect {|x| [x.name, x.id]}, {:include_blank => 'Select One'},class:'form-control' %><br /><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :format %><br />
-      <%= f.text_field :format ,class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :excerpt %><br />
-      <%= f.text_area :excerpt ,class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :pages %><br />
-      <%= f.number_field :pages ,class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :price %><br />
-      <%= f.text_field :price ,class:'form-control' %><br />
-    </div>
-
-    <div class="form-group">
-      <%= f.label :buy %><br />
-      <%= f.text_field :buy ,class:'form-control' %><br />
-    </div>
-
-    <%= f.submit "Submit", class:'btn btn-primary' %>
-    <%=link_to "Cancel", books_path, class:'btn btn-default' %>
-
-<% end %>
+<div id="books-show">
+  <h2>Ruby On Rails Power</h2>
+  <div class="books-show-left">
+    <%= image_tag('covers/ruby_on_rails_power.jpg') %>
+  </div>
+  <div class="books-show-right">
+    <h3>Book info:</h3>
+    <ul>
+      <li><strong>Category:</strong> Ruby On Rails</li>
+      <li><strong>Author:</strong> Aneesha Bakharia</li>
+      <li><strong>Publisher:</strong> Course Technology PTR</li>
+      <li><strong>Year:</strong> 2007</li>
+      <li><strong>ISBN:</strong> 1598632167</li>
+      <li><strong>Format:</strong> Paperback</li>
+      <li><strong>Pages:</strong> 678</li>
+    </ul>
+    <%=link_to "Buy For $5.47", 'http://www.ebay.com/itm/Ruby-Rails-Power-Comprehensive-Guide-Power-/221475598855?pt=US_Nonfiction_Book&hash=item3390f97207', class:'btn btn-success',target:'_blank' %>
+  </div>
+  <div class="clearfix"></div>
+  <h4>Excerpt</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum volutpat ipsum id dictum. Integer at fermentum ante. Quisque semper et nulla in condimentum. Mauris lacinia mi quis metus ornare tincidunt. Curabitur semper cursus magna, eget varius tellus viverra tincidunt. Suspendisse nisi magna, convallis et pellentesque in, efficitur ac quam. Curabitur blandit vestibulum vehicula. Fusce vitae facilisis dolor. Proin nec tristique magna, eu venenatis ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+</div>
