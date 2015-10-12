@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012092939) do
+ActiveRecord::Schema.define(version: 20151012095034) do
 
-  create_table "books", force: :cascade do |t|
+  create_table "book", force: :cascade do |t|
     t.string   "title",        limit: 255
     t.integer  "category_id",  limit: 4
     t.integer  "author_id",    limit: 4
