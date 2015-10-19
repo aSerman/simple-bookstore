@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20151012100154) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "book", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string   "title",        limit: 255
     t.integer  "category_id",  limit: 4
     t.integer  "author_id",    limit: 4
